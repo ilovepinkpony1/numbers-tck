@@ -1,3 +1,54 @@
+# Number Display App
+
+A Next.js application that displays a number from Firebase Realtime Database and allows updating it.
+
+## Features
+
+- Real-time number display with responsive font sizing
+- Mobile-friendly interface
+- Firebase Realtime Database integration
+- TypeScript support
+- Tailwind CSS styling
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Copy `.env.local.example` to `.env.local`:
+   ```bash
+   cp .env.local.example .env.local
+   ```
+4. Update `.env.local` with your Firebase configuration values
+5. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Firebase Setup
+
+1. Create a new Firebase project
+2. Enable Realtime Database
+3. Set up the following security rules for the database:
+   ```json
+   {
+     "rules": {
+       "number": {
+         ".read": true,
+         ".write": true
+       }
+     }
+   }
+   ```
+4. Copy your Firebase configuration values to `.env.local`
+
+## Usage
+
+- Visit `/` to see the current number
+- Visit `/change` to update the number
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
