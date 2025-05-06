@@ -1,7 +1,7 @@
 import { initializeApp, getApps } from "firebase/app";
-import { getDatabase } from "firebase/database";
+import { getDatabase, Database } from "firebase/database";
 
-let database;
+let database: Database | undefined;
 
 if (typeof window !== "undefined") {
   const firebaseConfig = {
