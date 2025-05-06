@@ -6,10 +6,10 @@ import { database } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 
 export default function Change() {
-  const [number, setNumber] = useState<string>("");
+  const [number, setNumber] = useState("");
   const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const numberRef = ref(database, "number");
     await set(numberRef, Number(number));

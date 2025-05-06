@@ -5,7 +5,7 @@ import { ref, onValue } from "firebase/database";
 import { database } from "@/lib/firebase";
 
 export default function Home() {
-  const [number, setNumber] = useState<number | null>(null);
+  const [number, setNumber] = useState(null);
 
   useEffect(() => {
     const numberRef = ref(database, "number");
